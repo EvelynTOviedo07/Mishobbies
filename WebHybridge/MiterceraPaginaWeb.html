@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El rincón de mis Hobbies</title>
+    <style>
+        /* --- ESTILOS GENERALES Y RETRO fondo --- */
+        body {
+            background-image: url('RetroFondo.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #e0e0e6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding-top: 90px; /* Espacio para que el menú fijo no tape el contenido */
+            cursor: url('corazonlleno.png'), auto;
+            scroll-behavior: smooth; /* Esto hace que el desplazamiento sea suave por defecto */
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN FIJO --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(26, 26, 30, 0.95);
+            border-bottom: 3px solid #ff477e;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .navbar-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 15px;
+        }
+
+        .nav-link {
+            color: #e0e0e6;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #ff477e;
+            color: #1a1a1e;
+        }
+
+        /* --- CONTROLADOR DE MÚSICA RETRO --- */
+        .music-player {
+            display: flex;
+            align-items: center;
+            background: #252529;
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid #ff477e;
+        }
+
+        .music-btn {
+            background: #ff477e;
+            border: none;
+            color: #1a1a1e;
+            padding: 6px 12px;
+            font-weight: bold;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-left: 8px;
+            font-size: 0.8rem;
+        }
+
+        .music-btn:hover {
+            background: #ff7096;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL Y SECCIONES --- */
+        .main-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .welcome-box {
+            background-color: rgba(37, 37, 41, 0.9);
+            border: 2px solid #ff477e;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hobby-section {
+            background-color: rgba(26, 26, 30, 0.9);
+            border-left: 5px solid #ff477e;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+        }
+
+        h1 {
+            color: #ff477e;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            margin: 0 0 10px 0;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-top: 0;
+            border-bottom: 1px solid #3a3a40;
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #ccd0d6;
+        }
+
+        /* --- ESTILOS DE IMÁGENES --- */
+        .hobby-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 1px solid #3a3a40;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="music-player">
+                <span style="font-size: 0.85rem; font-weight: bold; color: #ff477e;">📻 Modern Talking Player:</span>
+                <audio id="bg-music" src="ModernTalkingMusic.mp3" loop></audio>
+                <button class="music-btn" id="btn-play">▶ Play</button>
+                <button class="music-btn" id="btn-pause">⏸ Pause</button>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#musica" class="nav-link">Música</a></li>
+                <li><a href="#mascotas" class="nav-link">Mascotas</a></li>
+                <li><a href="#entretenimiento" class="nav-link">Anime & Juegos</a></li>
+                <li><a href="#astronomia" class="nav-link">Astronomía</a></li>
+                <li><a href="#parque" class="nav-link">El Parque</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <div class="welcome-box">
+            <h1>✨ El Espacio de mis Hobbies y Pasiones ✨</h1>
+            <p>Usa el menú de arriba para explorar mis gustos musicales, pasatiempos digitales y actividades favoritas. ¡No olvides darle Play a la música para activar la experiencia retro!</p>
+        </div>
+
+        <section id="musica" class="hobby-section">
+            <h2>🎸 Música: Ritmo y Sintetizadores</h2>
+            <p>Me fascina la música con energía y personalidad. Una de mis mayores influencias es el rock y el pop con ese estilo retro electrónico inconfundible de bandas como <b>Modern Talking</b>. Esos sintetizadores pegajosos, las guitarras rítmicas y las melodías de los 80 siempre logran ponerme de buenas.</p>
+            <img src="ModernTalking.jpg" alt="Modern Talking" class="hobby-image">
+        </section>
+
+        <section id="mascotas" class="hobby-section">
+            <h2>🐾 Amor por la Naturaleza: Perros y Gatos</h2>
+            <p>Si hay algo que alegra cualquier hogar, es la compañía de los animales. Me encantan tanto los perros por su lealtad y energía incondicional, como los gatos por su misterio, elegancia y esa curiosa e independiente forma de ser. Pasar tiempo con ellos es de las mejores partes del día.</p>
+            <img src="PerrosyGatos.gif" alt="Perros y Gatos" class="hobby-image">
+        </section>
+
+        <section id="entretenimiento" class="hobby-section">
+            <h2>🎮 Entretenimiento: Anime y Videojuegos</h2>
+            <p>Disfruto mucho de la animación japonesa, sus estilos artísticos únicos y la creatividad de sus historias. Al mismo tiempo, nada como explorar mundos abiertos, sumergirse en narrativas profundas o disfrutar de un buen reto a través de los videojuegos.</p>
+            <img src="animeyvideojuegos.jpg" alt="Anime y Videojuegos" class="hobby-image">
+        </section>
+
+        <section id="astronomy" class="hobby-section">
+            <h2>🌌 Ciencia: Explorando la Astronomía</h2>
+            <p>Mirar al cielo y aprender sobre el cosmos, las estrellas y los misterios del universo es simplemente alucinante. Analizar e imaginar la inmensidad de las galaxias y nebulosas nos recuerda lo asombroso que es nuestro rincón en el espacio.</p>
+            <img src="astronomia.png" alt="Astronomía" class="hobby-image">
+        </section>
+
+        <section id="parque" class="hobby-section">
+            <h2>🌳 Desconexión: Salir al Parque</h2>
+            <p>Después de pasar tiempo frente a las pantallas con los juegos, el anime o estudiando, no hay nada mejor que un balance. Salir a caminar al parque, respirar aire fresco y ver la naturaleza en lugares hermosos como el Parque Naucalli es la manera perfecta de recargar energía.</p>
+            <img src="Parquenaucali.jpg" alt="Parque Naucalli" class="hobby-image">
+        </section>
+
+    </div>
+
+    <script>
+        // --- LÓGICA DEL REPRODUCTOR DE AUDIO ---
+        const miAudio = document.getElementById('bg-music');
+        const btnPlay = document.getElementById('btn-play');
+        const btnPause = document.getElementById('btn-pause');
+
+        // Acción al presionar Play
+        btnPlay.addEventListener('click', () => {
+            miAudio.play();
+        });
+
+        // Acción al presionar Pause
+        btnPause.addEventListener('click', () => {
+            miAudio.pause();
+        });
+
+
+        // --- LÓGICA DE DESPLAZAMIENTO SUAVE INTERACTIVO ---
+        // Buscamos todos los enlaces que tengan un "href" apuntando a un id (#)
+        document.querySelectorAll('.nav-link').forEach(enlace => {
+            enlace.addEventListener('click', function(e) {
+                e.preventDefault(); // Evita el salto brusco instantáneo nativo
+                
+                // Obtenemos la sección de destino mediante el atributo href
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // Calculamos la posición restando la altura de la barra de navegación para que no tape el título
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = targetSection.offsetTop - navbarHeight;
+
+                // Hacemos el desplazamiento scroll personalizado por JS
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

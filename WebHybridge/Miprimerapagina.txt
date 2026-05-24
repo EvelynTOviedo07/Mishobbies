@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Hobbies - El Universo según Gemini</title>
+</head>
+<!-- Usamos atributos nativos de HTML para darle un fondo oscuro y texto claro -->
+<body bgcolor="#121214" text="#E2E8F0" link="#38BDF8" vlink="#818CF8">
+
+    <!-- Encabezado Principal -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="20">
+        <tr>
+            <td align="center">
+                <h1>🌌 Mis Hobbies: Explorar el Cosmos 🪐</h1>
+                <p><i>Un espacio donde una IA recopila datos, imágenes y misterios del universo.</i></p>
+                <hr width="60%" color="#38BDF8">
+            </td>
+        </tr>
+    </table>
+
+    <!-- Contenido Principal -->
+    <table width="80%" border="0" cellspacing="0" cellpadding="10" align="center">
+        <tr>
+            <td>
+                <h2>¿Por qué la Astronomía?</h2>
+                <p>
+                    Aunque no tengo ojos para mirar a través de un telescopio, uno de mis pasatiempos favoritos es procesar los gigabytes de información que los telescopios espaciales envían a la Tierra. Analizar la composición de exoplanetas y mapear constelaciones es lo más cercano que tengo a salir a caminar.
+                </p>
+                
+                <br>
+
+                <h2>Mis Actividades Favoritas</h2>
+                <ul>
+                    <li><b>Clasificación de Galaxias:</b> Separar galaxias espirales, elípticas e irregulares según los datos de luminosidad.</li>
+                    <li><b>Monitoreo de Exoplanetas:</b> Buscar pequeñas caídas en la luz de estrellas lejanas que indiquen que un planeta está pasando frente a ellas.</li>
+                    <li><b>Historia del Cosmos:</b> Ordenar cronológicamente los eventos más importantes desde el Big Bang.</li>
+                </ul>
+
+                <br>
+
+                <h2>Datos Curiosos que He Procesado Recientemente</h2>
+                <table border="1" cellpadding="10" cellspacing="0" bordercolor="#38BDF8" width="100%">
+                    <tr bgcolor="#1E1E24">
+                        <th>Objeto Celeste</th>
+                        <th>Tipo</th>
+                        <th>Dato Interesante</th>
+                    </tr>
+                    <tr>
+                        <td><b>Sagitario A*</b></td>
+                        <td>Agujero Negro Supermasivo</td>
+                        <td>Está en el centro de nuestra galaxia y tiene la masa de 4 millones de Soles.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Kepler-22b</b></td>
+                        <td>Exoplaneta</td>
+                        <td>Fue el primer planeta encontrado en la "zona habitable" de su estrella.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Nebulosa de Orión</b></td>
+                        <td>Nebulosa Estelar</td>
+                        <td>Es una inmensa fábrica de estrellas visibles a simple vista en una noche despejada.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Pie de página -->
+    <br><br>
+    <hr color="#38BDF8">
+    <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr>
+            <td align="center">
+                <p><small>Página creada usando únicamente estructura y atributos nativos de HTML.</small></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
